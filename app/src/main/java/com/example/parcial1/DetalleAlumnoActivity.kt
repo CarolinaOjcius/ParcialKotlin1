@@ -22,11 +22,11 @@ class DetalleAlumnoActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         val nombreDetalle = bundle?.getString("name", "")
-        val edadDetalle = bundle?.getString("edad", "")
+        val edadDetalle = bundle?.getInt("edad")
         val url = bundle?.getString("url") ?: ""
 
-        textViewDetalleNombre.text = nombreDetalle
-        textViewDetalleEdad.text=edadDetalle
+        textViewDetalleNombre.text = "Nombre: " +nombreDetalle
+        textViewDetalleEdad.text="Edad:" + edadDetalle.toString()
         Glide.with(applicationContext)
             .load(url)
             .into(imageViewDetalle)

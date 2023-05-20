@@ -31,7 +31,8 @@ class ListaAlumnosActivity : AppCompatActivity() {
                 30,
                 "https://upload.wikimedia.org/wikipedia/en/9/91/Ryan_Howard_%28The_Office%29.jpg"
             )
-            listaAlumnos.add(alumno)
+            //listaAlumnos.add(alumno)
+            listaAlumnos.add(0, alumno)
             adapter.submitList(listaAlumnos)
 
         }
